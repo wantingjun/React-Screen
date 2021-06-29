@@ -3,6 +3,7 @@
   flex:1;
   display: flex;
   flex-direction:column;
+  background:#010310;
 
   > header{
     height:px(99);
@@ -10,6 +11,7 @@
     background: aquamarine;
   }
   > main {
+    padding-top:px(30);
     flex: 1;
     display: grid;
     grid-template:
@@ -17,25 +19,47 @@
             "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
     grid-column-gap:px(28);
     grid-row-gap: px(28);
+
+    > section{
+      border: 1px solid #0f3362;
+      border-radius:4px;
+      position:relative;
+      box-shadow:0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
+      background:#0c1139;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        border-radius: 4px;
+        box-shadow: 17px 0 0 -16px #0e325f,
+        -17px 0 0 -16px #0e325f,
+        0 17px 0 -16px #0e325f,
+        0 -17px 0 -16px #0e325f,
+        9px 0 0 -8px #0d4483,
+        -9px 0 0 -8px #0d4483,
+        0 9px 0 -8px #0d4483,
+        0 -9px 0 -8px #0d4483,;
+
+      }
+    }
     > .section1 {
       grid-area: box1;
-      background: pink;
     }
     > .section2 {
       grid-area: box2;
-      background: lightgray;
     }
     > .section3 {
       grid-area: box3;
-      background: lightblue;
+
     }
     > .section4 {
       grid-area: box4;
-      background: lightcyan;
     }
     > .section5 {
       grid-area: box5;
-      background: lightyellow;
     }
   }
 
