@@ -1,17 +1,16 @@
 import React, {useEffect, useRef} from "react";
 import * as echarts from "echarts";
+import {px} from "../shared/px";
+import {baseEchartOptions} from "../shared/base-echart-options";
+import {createEchartsOptions} from "../shared/create-echarts-options";
 
-const px =(n)=>n/2420 * (window as any).pageWidth;
+
 export const Chart1=()=>{
     const divRef = useRef(null)
     useEffect(()=>{
         console.log(divRef.current)
         var myChart = echarts.init(divRef.current);
-        myChart.setOption({
-            textStyle:{
-                fontSize:px(12),
-                color:'#79839e'
-            },
+        myChart.setOption(createEchartsOptions({
             xAxis: {
                 data: ['兰州新区', '2兰州新区', '3兰州新区', '4兰州新区', '5兰州新区', '6兰州新区','7','8','9'],
                 axisTick:false,
@@ -30,12 +29,6 @@ export const Chart1=()=>{
                     }
                 }
             },
-            grid:{
-                x:px(40),
-                y:px(40),
-                x2:px(40),
-                y2:px(40)
-            },
             yAxis: {
                 splitLine: {show: false},
                 axisLabel:{
@@ -52,7 +45,7 @@ export const Chart1=()=>{
                 type: 'bar',
                 data: [5, 20, 36, 10, 30, 20,39,17,19]
             }]
-        });
+        }));
     },[])
     return (
         <div className="管辖统计 bordered">
