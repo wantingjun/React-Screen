@@ -3,9 +3,11 @@
   flex:1;
   display: flex;
   flex-direction:column;
+
   > header{
     height:px(99);
     background-size:cover;
+    background: aquamarine;
   }
   > main {
     flex: 1;
@@ -13,6 +15,8 @@
     grid-template:
             "box1 box2 box4 box5" 755fr
             "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+    grid-column-gap:px(28);
+    grid-row-gap: px(28);
     > .section1 {
       grid-area: box1;
       background: pink;
