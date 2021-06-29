@@ -117,8 +117,12 @@
           width: px(18); height: px(12);
           background: red; margin: 0 px(10);
         }
-        .first {}
-        .second {}
+        .first {
+          background: linear-gradient(90deg, #2034f9 0%, #04a1ff 100%);
+        }
+        .second {
+          background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
+        }
       }
     }
 

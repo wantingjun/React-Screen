@@ -10,6 +10,19 @@ export const Chart2=()=>{
         console.log(divRef.current)
         var myChart = echarts.init(divRef.current);
         myChart.setOption(createEchartsOptions({
+            legend: {
+                data: ['2011年', '2012年'],
+                bottom:0,
+                textStyle:{
+                    color: "white"
+                }
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
             grid:{
                 x:px(100),
                 y:px(40),
@@ -37,12 +50,34 @@ export const Chart2=()=>{
                 {
                     name: '2011年',
                     type: 'bar',
-                    data: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                    data: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                                offset: 0,
+                                color: '#2034f9'
+                            }, {
+                                offset: 1,
+                                color: '#04a1ff'
+                            }]),
+                        }
+                    }
                 },
                 {
                     name: '2012年',
                     type: 'bar',
-                    data: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    data: [2, 3, 4, 5, 6, 7, 8, 9, 10],
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                                offset: 0,
+                                color: '#b92ae8'
+                            }, {
+                                offset: 1,
+                                color: '#6773e7'
+                            }]),
+                        }
+                    }
                 }
             ]
         }));
@@ -53,7 +88,7 @@ export const Chart2=()=>{
             <div ref={divRef} className="chart"/>
             <div className="legend">
                 <span className="first"/> 破案排名1
-                <span className="second"/> 破案排名1
+                <span className="second"/> 破案排名2
             </div>
         </div>
     )
