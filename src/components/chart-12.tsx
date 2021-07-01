@@ -5,7 +5,6 @@ import {px} from '../shared/px';
 
 export const Chart12 = () => {
     const divRef = useRef(null);
-    const colors = ['#F46064', '#F38E1C', '#1CDB7C', '#8D70F8', '#33A4FA'];
     const data = [
         {value: 0.08, name: '东岗路'},
         {value: 0.06, name: '段家滩'},

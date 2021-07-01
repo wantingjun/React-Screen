@@ -126,6 +126,11 @@
     .发案趋势, .案发时段 {
       height: px(363);
     }
+    .chart12 {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
     .年龄段 {
       display: flex;
       flex-direction: column;
