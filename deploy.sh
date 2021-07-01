@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
-rm -rf dist &&
-yarn build &&
-cd ../dist &&
+
+yarn build --base ./&&
+cd dist &&
 git init &&
 git add . &&
 git commit -m deploy &&
 git remote add origin git@github.com:wantingjun/React-screen-website.git &&
 git branch -M main &&
-git push -u origin main &&
+git push -u origin main -f &&
 cd -;
