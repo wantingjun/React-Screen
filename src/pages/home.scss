@@ -116,17 +116,20 @@
       > .charts {
         width: 100%;
         flex: 1;
-        border: 1px solid green;
         display: flex; padding: px(30);
       }
       &-图1, &-图2, &-图3 {
         flex: 1;display: flex; flex-direction: column;
       }
-      &-图1 {
+      &-图1, &-图2 {
         .legend {height: px(40); display: flex; align-items: center;
-          justify-content: center;
-          > span {display: inline-block; width: px(40); height: px(20);
-            border-radius: px(4); margin: 0 px(10);}
+          justify-content: center; flex-wrap: wrap;
+          > span {
+            display: inline-block;
+            width: px(16);
+            height: px(10);
+            border-radius: px(2);
+            margin: 0 px(10);}
           .male {background: #33a4fa;}
           .female {background: #8d70f8;}
         }
@@ -136,6 +139,13 @@
           > .main {flex: 1;}
           > .text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
             color: #33a4fa; font-size: px(40); text-shadow: 0 0 px(20) #33a4fa;font-weight: bold;}
+        }
+      }
+      &-图2 {
+        width: px(290);
+        flex-shrink: 0;
+        .legend {
+          justify-content: flex-start;
         }
       }
     }
