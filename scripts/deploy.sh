@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
-
+rm -rf dist &&
 yarn build &&
-cd dist &&
+cd ../dist &&
 git init &&
 git add . &&
 git commit -m deploy &&

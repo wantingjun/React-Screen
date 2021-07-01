@@ -55,7 +55,7 @@ export const Chart12 = () => {
     }, []);
 
     return (
-        <div className="年龄段-图1">
+        <div className="chart12"">
             <div className="chart">
                 <div className="main" ref={divRef}/>
             </div>
