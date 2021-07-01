@@ -43,6 +43,7 @@
       box-shadow:0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
       background:#0f113a;;
       &::before{
+        pointer-events: none;
         content: '';
         position: absolute;
         left: 0;
