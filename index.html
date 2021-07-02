@@ -4,17 +4,17 @@
   <meta charset="UTF-8"/>
   <meta name="viewport"
     content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-  <title>大屏可视化项目</title>
+  <title>大屏可视化</title>
   <script>
-    const clientWidth= document.documentElement.clientWidth
-    const clientHeight = document.documentElement.clientHeight
-    window.pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth;
-    const pageHeight = pageWidth/(16/9)
+    const clientWidth= document.documentElement.clientWidth //设备宽度
+    const clientHeight = document.documentElement.clientHeight // 设备高度
+    window.pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth; //页面宽度
+    const pageHeight = pageWidth/(16/9) //页面高度
     const string = `<style>html{
-        font-size:${pageWidth/100}px
+        font-size:${pageWidth/100}px // 1rem
     }</style>
     `
-    document.write(string)
+    document.write(string) // 标签写在document里即可
   </script>
 </head>
 <body>
@@ -22,7 +22,7 @@
 <script>
  // root.style.width = pageWidth +'px'
   root.style.height= pageHeight+ 'px'
-  root.style.marginTop = (clientHeight - pageHeight) / 2  + 'px'
+  root.style.marginTop = (clientHeight - pageHeight) / 2  + 'px' // 多余区域的一半设为margin-top
 </script>
 <script type="module" src="/src/main.tsx"></script>
 </body>
